@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import '../index.css';
 
 function ContactsComponent() {
     interface Contact {
@@ -45,10 +46,12 @@ function ContactsComponent() {
     }
 
     return (
-        <div>
+        <div className='mainScreen'>
             <ul>
                 {data.slice(0, data.length).map((item) => (
-                    <li key={item.numeroIdentificacion}>{item.nombreCompleto}</li>
+                    <div className='card' key={item.numeroIdentificacion}>
+                        <div className='cardText'>{item.nombreCompleto}</div>
+                    </div>
                 ))}
             </ul>
         </div>
