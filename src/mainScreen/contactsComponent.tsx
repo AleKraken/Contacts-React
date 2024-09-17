@@ -19,7 +19,7 @@ function ContactsComponent() {
     const [error, setError] = useState(null);
 
     useEffect(() => {
-        fetch('http://localhost:8080/api/contacts')
+        fetch('http://localhost:8080/api/contacts?limit=10000')
             .then((response) => {
 
                 if (!response.ok) {
@@ -51,6 +51,7 @@ function ContactsComponent() {
                 {data.slice(0, data.length).map((item) => (
                     <div className='card' key={item.numeroIdentificacion}>
                         <div className='cardText'>{item.nombreCompleto}</div>
+                        <div className='subtitleText'>{item.numeroIdentificacion}</div>
                     </div>
                 ))}
             </ul>

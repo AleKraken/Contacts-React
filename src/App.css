@@ -19,3 +19,10 @@
   padding: 5px;
   text-align: center;
 }
+
+.subtitleText {
+  padding: 5px;
+  text-align: center;
+  color: grey;
+  font-size: small;
+}
